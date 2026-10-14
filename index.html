@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panda Library</title>
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <a href="#inicio" class="marca">
+      <img src="img/logo.svg" alt="Logo de Panda Library" width="44" height="44">
+      <span>Panda Library</span>
+    </a>
+    <nav>
+      <ul class="nav-lista">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#resenas">Reseñas</a></li>
+        <li><a href="#video">Video</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <h1>Tu rincón tranquilo para leer</h1>
+      <p>Libros seleccionados con cariño, directo desde Buenos Aires.</p>
+      <a href="#productos" class="boton">Ver libros</a>
+    </section>
+
+    <section id="productos" class="seccion">
+      <h2>La saga de Los juegos del hambre</h2>
+      <div class="cards">
+        <article class="card">
+          <img src="img/los-juegos-del-hambre.jpeg" alt="Portada de Los juegos del hambre">
+          <h3>Los juegos del hambre</h3>
+          <p class="autor">Suzanne Collins</p>
+          <p class="descripcion">Katniss se ofrece como voluntaria para reemplazar a su hermana en un torneo televisado a muerte.</p>
+          <p class="precio">$24.900</p>
+        </article>
+        <article class="card">
+          <img src="img/en-llamas.jpeg" alt="Portada de En llamas">
+          <h3>En llamas</h3>
+          <p class="autor">Suzanne Collins</p>
+          <p class="descripcion">Tras ganar los Juegos, Katniss descubre que su desafío encendió la rebelión en los distritos.</p>
+          <p class="precio">$24.900</p>
+        </article>
+        <article class="card">
+          <img src="img/sinsajo.jpeg" alt="Portada de Sinsajo">
+          <h3>Sinsajo</h3>
+          <p class="autor">Suzanne Collins</p>
+          <p class="descripcion">Katniss se convierte en el símbolo de la revolución contra el Capitolio en la batalla final.</p>
+          <p class="precio">$26.500</p>
+        </article>
+        <article class="card">
+          <img src="img/balada-de-pajaros-cantores-y-serpientes.jpeg" alt="Portada de Balada de pájaros cantores y serpientes">
+          <h3>Balada de pájaros cantores y serpientes</h3>
+          <p class="autor">Suzanne Collins</p>
+          <p class="descripcion">El joven Coriolanus Snow mentoriza a una tributo en la décima edición de los Juegos.</p>
+          <p class="precio">$27.900</p>
+        </article>
+        <article class="card">
+          <img src="img/amanecer-en-la-cosecha.jpeg" alt="Portada de Amanecer en la cosecha">
+          <h3>Amanecer en la cosecha</h3>
+          <p class="autor">Suzanne Collins</p>
+          <p class="descripcion">La historia de Haymitch Abernathy y su participación en los Juegos del Hambre número cincuenta.</p>
+          <p class="precio">$27.900</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="resenas" class="seccion seccion-clara">
+      <h2>Lo que dicen nuestros lectores</h2>
+      <div class="resenas">
+        <blockquote class="resena">
+          <p>“Encontré mi próximo libro favorito. La atención fue súper amable.”</p>
+          <footer>— Lucía, Palermo ★★★★★</footer>
+        </blockquote>
+        <blockquote class="resena">
+          <p>“Llegó rápido y bien embalado. Volveré a comprar seguro.”</p>
+          <footer>— Martín, Caballito ★★★★★</footer>
+        </blockquote>
+        <blockquote class="resena">
+          <p>“Una selección muy cuidada, se nota que aman los libros.”</p>
+          <footer>— Camila, Villa Crespo ★★★★☆</footer>
+        </blockquote>
+        <blockquote class="resena">
+          <p>“Me recomendaron una lectura perfecta para mi regalo.”</p>
+          <footer>— Julián, Belgrano ★★★★★</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <section id="video" class="seccion">
+      <h2>Por qué leer los juegos del hambre</h2>
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/7Y3ZPptTuXc" title="Trailer los juegos del hambre" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </section>
+
+    <section id="contacto" class="seccion seccion-clara">
+      <h2>Contacto</h2>
+      <form class="formulario" action="https://formspree.io/f/mdeawyok" method="POST">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="correo">Correo electrónico</label>
+        <input type="email" id="correo" name="email" required>
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+        <button type="submit" class="boton">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Panda Library · Av. Corrientes 1234, CABA, Buenos Aires</p>
+    <p>hola@pandalibrary.com.ar · Lunes a sábado de 10 a 19 h</p>
+  </footer>
+</body>
+</html>

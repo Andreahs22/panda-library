@@ -1,0 +1,279 @@
+:root {
+  --esmeralda: #0f6b57;
+  --esmeralda-oscuro: #0b4f40;
+  --menta: #e6f4ef;
+  --menta-suave: #f4faf8;
+  --texto: #1f2d2a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--texto);
+  background-color: #fbfdfc;
+  line-height: 1.6;
+}
+
+h1, h2, h3, .marca span {
+  font-family: "Playfair Display", serif;
+}
+
+/* Header y navegación */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0.8rem 2rem;
+  background-color: var(--esmeralda);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.nav-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-lista a {
+  color: var(--menta);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-lista a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Hero con degradado */
+.hero {
+  text-align: center;
+  padding: 5rem 1.5rem;
+  background: linear-gradient(180deg, var(--menta) 0%, #fbfdfc 100%);
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+  color: var(--esmeralda-oscuro);
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  margin-bottom: 1.5rem;
+}
+
+.boton {
+  display: inline-block;
+  padding: 0.7rem 1.6rem;
+  background-color: var(--esmeralda);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.boton:hover {
+  background-color: var(--esmeralda-oscuro);
+}
+
+/* Secciones */
+.seccion {
+  padding: 3.5rem 2rem;
+}
+
+.seccion-clara {
+  background-color: var(--menta-suave);
+}
+
+.seccion h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--esmeralda-oscuro);
+  margin-bottom: 2rem;
+}
+
+/* Productos: Flexbox */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.card {
+  flex: 1 1 200px;
+  max-width: 210px;
+  background-color: #fff;
+  border: 1px solid var(--menta);
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(15, 107, 87, 0.08);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 0.8rem;
+}
+
+.card h3 {
+  font-size: 1.05rem;
+}
+
+.autor {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.descripcion {
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.precio {
+  margin-top: 0.4rem;
+  font-weight: 600;
+  color: var(--esmeralda);
+}
+
+/* Reseñas: Grid */
+.resenas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.resena {
+  background-color: #fff;
+  border-left: 4px solid var(--esmeralda);
+  border-radius: 6px;
+  padding: 1.2rem 1.4rem;
+}
+
+.resena footer {
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+  color: var(--esmeralda);
+}
+
+/* Video */
+.video {
+  max-width: 720px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+}
+
+.video iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 10px;
+}
+
+/* Contacto */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.formulario label {
+  font-weight: 500;
+}
+
+.formulario input,
+.formulario textarea {
+  padding: 0.7rem;
+  border: 1px solid #b9d9cf;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+  outline: 2px solid var(--esmeralda);
+}
+
+.formulario .boton {
+  align-self: flex-start;
+  margin-top: 0.8rem;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--esmeralda-oscuro);
+  color: var(--menta);
+  text-align: center;
+  padding: 1.8rem 1rem;
+  font-size: 0.9rem;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  .header {
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .resenas {
+    grid-template-columns: 1fr;
+  }
+
+  .seccion {
+    padding: 2.5rem 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-lista {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+
+  .formulario .boton {
+    align-self: stretch;
+    text-align: center;
+  }
+}
